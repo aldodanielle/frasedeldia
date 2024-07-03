@@ -8,7 +8,7 @@
 // Usando cURL
 $ch = curl_init();      // iniciamos el cURL
 
-// Configuramos la URl
+// Configuramos la URL
 curl_setopt($ch, CURLOPT_URL, "https://frasedeldia.azurewebsites.net/api/phrase");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 
@@ -25,8 +25,8 @@ $data = json_decode($response, true);
 if(json_last_error() === JSON_ERROR_NONE){
     $phrase = $data ['phrase'] ?? 'NO phrase funnd';
     $author = $data['author'] ?? 'Unknown author funnd';
-    echo '<p class = "caja" >' . "Phrase: $phrase " . "<br>" . " Author: $author" . "</p>";
-    echo '<p class = "caja-ajustable">' . $phrase .'</p>';
+    echo '<p class = "caja" id = "frase" >' . "Phrase: $phrase " . "<br>" . " Author: $author" . "</p>";
+    echo '<p class = "caja-ajustable">' . "Phrase: "  . $phrase .'</p>';
     echo '<br>';
 }else{
     echo "Failed to decode JSON response";
