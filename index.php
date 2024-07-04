@@ -4,10 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style/style.css">
-    <title>API "Frase del dia"</title>
+    <title>Frase del dia</title>
 </head>
 <body>
     <h1>Consumo API "Frase del di"</h1>
+
+    <?php
+    include('php/main.php');
+    ?>
 
     <div class = "acciones">
         <button class = "boton generar-frase" id = "generar-frase">Frase</button>
