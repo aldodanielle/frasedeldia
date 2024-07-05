@@ -7,7 +7,12 @@
     <title>Frase del dia</title>
 </head>
 <body>
-    <h1>Consumo API "Frase del di"</h1>
+
+    <div class = "seccion-principal">
+        <h1>La frase del dia es</h1>
+        <h2>En lenguaje PHP</h2>
+
+    </div>
 
     <?php
     include('php/main.php');
@@ -18,5 +23,10 @@
         <button class = "boton nueva-frase" id = "nueva-frase">Nueva Frase</button>
         <button class = "boton enviar" id = "enviar">Enviar</button>
     </div>
+
+    <footer>
+        <!-- <p class = "text-center">Consumo de la API "frase del dia"</p> -->
+        Consumo de la API "frase del dia"  © 2024
+    </footer>
 </body>
 </html>
