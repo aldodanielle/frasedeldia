@@ -24,7 +24,7 @@
         <button class = "boton enviar" id = "enviar">Enviar</button>
     </div>
 
-    <footer>
+    <footer class = "fooster">
         <!-- <p class = "text-center">Consumo de la API "frase del dia"</p> -->
         Consumo de la API "frase del dia"  © 2024
     </footer>

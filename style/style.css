@@ -1,6 +1,13 @@
-.body{
-    background-color: #f5f5dc;
-    color: beige;
+html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* background-color: #f5f5dc;
+    color: beige; */
+}
+body{
+    display: felx;
+    flex-direction: column;
 }
 p{
     display: inline-block;
@@ -54,11 +61,10 @@ p{
     border-radius: 5px;
 }
 .footer{
-    flex-shrink: 0;
-    border-top: 1px dashed #000;
-    width: 100%;
-    background: #ffff;
-    color: #333;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
     /* background-color: black;
     position: absolute;
     bottom: 0;
