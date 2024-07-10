@@ -29,7 +29,7 @@
     </div>
 
     <footer class = "footer">
-        Consumo de la API "frase del dia"  © 2024 <p id = "actualizacion-fecha"></p>
+        Consumo de la API "frase del dia"  © 2024
         <br>
         <p class = "fecha-hora" id = "actualizacion-fecha"></p>
         <p class = "fecha-hora" id = "dame-hora"></p>
