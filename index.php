@@ -29,10 +29,10 @@
     </div>
 
     <footer class = "footer">
-        Consumo de la API "frase del dia"  © 2024
+        Consumo de la API "frase del dia" ©
         <br>
-        <p class = "fecha-hora" id = "actualizacion-fecha"></p>
-        <p class = "fecha-hora" id = "dame-hora"></p>
+        <a class = "fecha-hora" id = "actualizacion-fecha"></a> &emsp;
+        <a class = "fecha-hora" id = "dame-hora"></a>
     </footer>
 
     
