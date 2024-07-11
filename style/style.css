@@ -1,12 +1,4 @@
-/* html, body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-}
-body{
-    display: felx;
-    flex-direction: column;
-}
+/* 
 p{
     display: inline-block;
     font-family: sans-serif;
@@ -123,11 +115,11 @@ main .container {
     align-items: center;
     gap: 32px;
 }
-main .container figure{
-    height: 90px;  /* Tamaño del logo y posicion*/
+main .container figure{ /* Tamaño del logo y posicion*/
+    height: 90px;
 }
-main .container figure img {
-    height: 100%; /* porcentaje de vista */
+main .container figure img { /* porcentaje de vista */
+    height: 100%;
 }
 main .container .searcher { /* Barra de busqueda */
     display: flex; 
