@@ -10,24 +10,6 @@
 </head>
 <body>
 
-    <!-- <div class = "seccion-principal">
-        <h1>La frase del dia es</h1>
-    </div>
-
-    <p id = "imprime-frase">
-        Api frase del dia <br>
-    </p>
-    <?php
-    // include('php/main.php');
-    ?>
-
-    <div class = "acciones">
-        <button class = "boton generar-frase" id = "generar-frase">Frase</button>
-        <button class = "boton nueva-frase" id = "nueva-frase">Nueva Frase</button>
-        <button class = "boton enviar" id = "enviar">Enviar</button>
-    </div> -->
-
-        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
     <main>
         <div class="container">
             <figure>
@@ -35,17 +17,41 @@
             </figure>
             <div class="searcher">
                 <span class="search-logo"></span>
-                <input type="text">
+                <input id = "respuesta-frase-generada" type="text">
                 <button><span class="micro-logo"></span></button>
                 <button><span class="camera-logo"></span></button>
             </div>
             <div class="searcher-buttons">
-                <button>Buscar frase</button>
+                <button  id = "ejecutar-btn">Buscar frase</button>
                 <button>Enviar frase</button>
             </div>
             <p>Ofrecido por API: "frase del dia"</p>
         </div>
     </main>
+
+    <div id = "respuesta" style = "color: white"></div>
+    <button id = "ejecutar-btn">Ejecutar</button>
+    <script>
+        document.getElementById('ejecutar-btn').addEventListener('click', function(){
+            var xhr = new XMLHttpRequest();
+            // xhr.open('GET', 'php/main.php', true);
+            xhr.open('GET', 'php/main.php?action=ejecutar', true);
+            xhr.onload = function(){
+                if (xhr.status === 200){
+                    console.log('solicitud correcta => ', xhr.responseText, error_reporting);
+                    var data = JSON.parse(xhr.responseText)
+                    if(data.error){
+                        document.getElementById('respuesta').innerText = data.error;
+                    }else{
+                        document.getElementById('respuesta-frase-generada').value = "Frase: " + data.phrase + "- Autor: " + data.author;
+                    }
+                }else{
+                    console.error('Error de respuesta: ', xhr.status, xhr.statusText);
+                }
+            }
+            xhr.send();
+        });
+    </script>
 
     <footer class = "footer">
         Consumo de la API "frase del dia" ©
