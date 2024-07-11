@@ -17,13 +17,18 @@ curl_close($ch);
 // Decodificamos la respuesta JSON
 $data = json_decode($response, true);
 
+//verificamos la decodificacion tuvo exito
+$responseData = [];
+
 // Verificamos si la decodificacion tuvo exito
 if(json_last_error() === JSON_ERROR_NONE){
-    $phrase = $data ['phrase'] ?? 'NO phrase funnd';
-    $author = $data['author'] ?? 'Unknown author funnd';
-    echo '<p class = "caja" id = "frase" >' . "Phrase: $phrase " . "<br>" . " Author: $author" . "</p>";
-    echo '<br>' . '<br>';
+    $responseData['phrase'] = $data ['phrase'] ?? 'NO phrase funnd';
+    $responseData['author'] = $data ['author'] ?? 'Unknown author funnd';
 }else{
-    echo "Failed to decode JSON response";
+    $responseData['error'] = "Failed to decode JSON response";
 }
+
+// Establecemos el encabezdo de contenIDO como JSON
+header('Content-Type: application/json');
+echo json_decode($responseData)
 ?>
