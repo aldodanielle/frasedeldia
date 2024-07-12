@@ -1,2 +1,3 @@
 # API frasedeldia
-Repositorio ejemplo del consumo de una API en el lenguaje PHP  
+## Basico
+Repositorio de ejemplo sobre el consumo de una API en el lenguaje PHP  

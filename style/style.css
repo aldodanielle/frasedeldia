@@ -1,6 +1,11 @@
-.body{
-    background-color: #f5f5dc;
-    color: beige;
+/* html, body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+body{
+    display: felx;
+    flex-direction: column;
 }
 p{
     display: inline-block;
@@ -13,13 +18,7 @@ p{
 
 }
 .caja{   
-    /* padding: 20px;            padding muy general 20px en cada lado
-    padding-top: 20px;
-    padding-right: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;  */
-
-    padding: 25px 25px 25px 25px;  /* Es lo mismo que lo de arriba solo que en una sola linea */
+    padding: 25px 25px 25px 25px;
     margin: 0 0 30px;
     overflow: hidden;
     left: 0;
@@ -32,7 +31,26 @@ p{
     -webkit-boder-radius: 15px 15px 15px 15px;
     border: 2px solid #e57d90;
 }
+.seccion-principal{
+    display: grid;
+  place-items: center;
 
+  height: 100px;
+  width: 200px;
+
+  background: #ffff99;
+  color: #333;
+}
+.prueba-centro{
+    background-color: #333;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
 .boton{
     border: none; 
     color: white; 
@@ -52,17 +70,109 @@ p{
     padding: 10px;
     border: 1px solid #000;
     border-radius: 5px;
+} */
+ /* ----------------------------------------------------------- */
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
-.footer{
-    flex-shrink: 0;
-    border-top: 1px dashed #000;
+
+body {
+    background-color: #202124;
+    height: 100vh;
+}
+
+.search-logo {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background-image: url(/img/search-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.micro-logo {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(img/micro-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.camera-logo {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    background-image: url(img/camera-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+main {
+    height: calc(100% - 60px - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+main .container figure{
+    height: 90px;  /* Tamaño del logo y posicion*/
+}
+main .container figure img {
+    height: 100%; /* porcentaje de vista */
+}
+main .container .searcher { /* Barra de busqueda */
+    display: flex; 
+    gap: 8px;
+    align-items: center;
+    height: 40px;
+    width: 450px;
+    padding: 8px 12px;
+    border: 1px solid gray;
+    border-radius: 24px;
+}
+main .container .searcher button { /* botones de microfono y camara  */
+    border: none;
+    background-color: transparent;
+}
+main .container .searcher input { /* Barra de Busqueda para cuando se escribe */
     width: 100%;
-    background: #ffff;
-    color: #333;
-    /* background-color: black;
+    border: none;
+    color: whitesmoke;
+    background-color: transparent;
+    outline: none;  /* eliminado esl borde */
+}
+main .container .searcher-buttons { /* separaador de mis botos de busqueda */
+    display: flex;
+    gap: 10px;
+}
+main .container .searcher-buttons button{ /* Estilo botones de busqueda */
+    border: none;
+    border-radius: 4px;
+    background-color: #303134;
+    padding: 12px;
+    color: whitesmoke;
+}
+main .container p { /* Frase de donde consumimos la api */
+    font-size: small;
+    color: whitesmoke;
+}
+ /* ----------------------------------------------------------- */
+.footer{
+    background-color: #202124;
     position: absolute;
     bottom: 0;
     width: 100%;
     height: 40px;
-    color: white; */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
 }
