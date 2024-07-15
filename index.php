@@ -9,25 +9,6 @@
     <title>Frase del dia</title>
 </head>
 <body>
-
-    <!-- <div class = "seccion-principal">
-        <h1>La frase del dia es</h1>
-    </div>
-
-    <p id = "imprime-frase">
-        Api frase del dia <br>
-    </p>
-    <?php
-    // include('php/main.php');
-    ?>
-
-    <div class = "acciones">
-        <button class = "boton generar-frase" id = "generar-frase">Frase</button>
-        <button class = "boton nueva-frase" id = "nueva-frase">Nueva Frase</button>
-        <button class = "boton enviar" id = "enviar">Enviar</button>
-    </div> -->
-
-        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
     <main>
         <div class="container">
             <figure>
