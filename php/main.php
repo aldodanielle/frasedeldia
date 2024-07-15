@@ -22,7 +22,7 @@ if(json_last_error() === JSON_ERROR_NONE){
     $phrase = $data ['phrase'] ?? 'NO phrase funnd';
     $author = $data['author'] ?? 'Unknown author funnd';
     echo '<p class = "caja" id = "frase" >' . "Phrase: $phrase " . "<br>" . " Author: $author" . "</p>";
-    echo '<br>' . '<br>';
+    echo '<br>';
 }else{
     echo "Failed to decode JSON response";
 }
