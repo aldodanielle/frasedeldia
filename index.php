@@ -21,12 +21,32 @@
                 <button><span class="camera-logo"></span></button>
             </div>
             <div class="searcher-buttons">
-                <button>Buscar frase</button>
-                <button>Enviar frase</button>
+                <button id = "buscar">Buscar frase</button>
+                <button id = "enviar">Enviar frase</button>
             </div>
             <p>Ofrecido por API: "frase del dia"</p>
         </div>
     </main>
+
+    <div id = "respuesta" style = "color: white"></div>
+    <button id = "ejecutar-btn">Dame una frase</button>
+    <script>
+        document.getElementById('ejecutar-btn', ).addEventListener('click', function(){
+            var xhr = new XMLHttpRequest();
+            // cremos la solicitud
+            xhr.open('GET', 'php/main.php', true);
+            // manejamos la solicitud
+            xhr.onload = function(){
+                if(xhr.status === 200){
+                    console.log('PHP ejecutado correctamente' , xhr.responseText);
+                    document.getElementById('respuesta').innerHTML = xhr.responseText;
+                }else{
+                    console.error('Error al ejecutar PHP', xhr.status, xhr.statusText);
+                }
+            };
+            xhr.send();
+        });
+    </script>
 
     <footer class = "footer">
         Consumo de la API "frase del dia" ©
