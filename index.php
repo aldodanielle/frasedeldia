@@ -31,7 +31,7 @@
     <div id = "respuesta" style = "color: white"></div>
     <button id = "ejecutar-btn">Dame una frase</button>
     <script>
-        document.getElementById('ejecutar-btn', ).addEventListener('click', function(){
+        document.getElementById('ejecutar-btn' ).addEventListener('click', function(){
             var xhr = new XMLHttpRequest();
             // cremos la solicitud
             xhr.open('GET', 'php/main.php', true);
