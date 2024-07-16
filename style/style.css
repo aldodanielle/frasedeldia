@@ -50,7 +50,7 @@ main .container {
     gap: 32px;
 }
 main .container figure{
-    height: 90px;  /* Tamaño del logo y posicion*/
+    height: 92px;  /* Tamaño del logo y posicion*/
 }
 main .container figure img {
     height: 100%; /* porcentaje de vista */
@@ -74,7 +74,7 @@ main .container .searcher input { /* Barra de Busqueda para cuando se escribe */
     border: none;
     color: whitesmoke;
     background-color: transparent;
-    outline: none;  /* eliminado esl borde */
+    outline: none;  /* eliminado el borde */
 }
 main .container .searcher-buttons { /* separaador de mis botos de busqueda */
     display: flex;
