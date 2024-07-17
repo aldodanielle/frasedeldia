@@ -16,7 +16,10 @@
             </figure>
             <div class="searcher">
                 <span class="search-logo"></span>
-                <input type="text">
+                <!-- <input type="text"> -->
+                <?php
+                    echo '<p id = "respuesta" style = "color: white;">';
+                ?>
                 <button><span class="micro-logo"></span></button>
                 <button><span class="camera-logo"></span></button>
             </div>
@@ -28,10 +31,8 @@
         </div>
     </main>
 
-    <div id = "respuesta" style = "color: white"></div>
-    <button id = "ejecutar-btn">Dame una frase</button>
     <script>
-        document.getElementById('ejecutar-btn' ).addEventListener('click', function(){
+        document.getElementById('buscar').addEventListener('click', function(){
             var xhr = new XMLHttpRequest();
             // cremos la solicitud
             xhr.open('GET', 'php/main.php', true);
