@@ -12,8 +12,8 @@ body {
 
 .search-logo {
     display: inline-block;
-    width: 200px;
-    height: 200px;
+    width: 20px;
+    height: 20px;
     background-image: url(/img/search-logo.svg);
     background-repeat: no-repeat;
     background-position: center;
@@ -66,7 +66,7 @@ main .container .searcher { /* Barra de busqueda */
     border-radius: 24px;
 }
 main .container .searcher button { /* botones de microfono y camara  */
-    border: none;
+    border: 4px;
     background-color: transparent;
 }
 main .container .searcher input { /* Barra de Busqueda para cuando se escribe */
