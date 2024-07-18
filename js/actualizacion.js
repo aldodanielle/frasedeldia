@@ -7,13 +7,13 @@ document.addEventListener("DOMContentLoaded", function(){
     var elementoFecha = document.getElementById("actualizacion-fecha");
     elementoFecha.innerHTML = fechaActual;
 
-    var horario = new Date();
-    var hora = horario.getHours();
-    var min = horario.getMinutes();
-    var sec = horario.getSeconds();
-    var horaActual = hora + ':' + min + ':' + sec;
-    var elementoHora = document.getElementById("dame-hora");
-    elementoHora.innerHTML = horaActual;
+    // var horario = new Date();
+    // var hora = horario.getHours();
+    // var min = horario.getMinutes();
+    // var sec = horario.getSeconds();
+    // var horaActual = hora + ':' + min + ':' + sec;
+    // var elementoHora = document.getElementById("dame-hora");
+    // elementoHora.innerHTML = horaActual;
 });
 
 
