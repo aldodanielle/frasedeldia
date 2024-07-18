@@ -9,25 +9,6 @@
     <title>Frase del dia</title>
 </head>
 <body>
-
-    <!-- <div class = "seccion-principal">
-        <h1>La frase del dia es</h1>
-    </div>
-
-    <p id = "imprime-frase">
-        Api frase del dia <br>
-    </p>
-    <?php
-    // include('php/main.php');
-    ?>
-
-    <div class = "acciones">
-        <button class = "boton generar-frase" id = "generar-frase">Frase</button>
-        <button class = "boton nueva-frase" id = "nueva-frase">Nueva Frase</button>
-        <button class = "boton enviar" id = "enviar">Enviar</button>
-    </div> -->
-
-        <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
     <main>
         <div class="container">
             <figure>
@@ -35,17 +16,38 @@
             </figure>
             <div class="searcher">
                 <span class="search-logo"></span>
-                <input type="text">
+                <!-- <input type="text"> -->
+                <?php
+                    echo '<p id = "respuesta" style = "color: white;">';
+                ?>
                 <button><span class="micro-logo"></span></button>
                 <button><span class="camera-logo"></span></button>
             </div>
             <div class="searcher-buttons">
-                <button>Buscar frase</button>
-                <button>Enviar frase</button>
+                <button id = "buscar">Buscar frase</button>
+                <button id = "enviar">Enviar frase</button>
             </div>
             <p>Ofrecido por API: "frase del dia"</p>
         </div>
     </main>
+
+    <script>
+        document.getElementById('buscar').addEventListener('click', function(){
+            var xhr = new XMLHttpRequest();
+            // cremos la solicitud
+            xhr.open('GET', 'php/main.php', true);
+            // manejamos la solicitud
+            xhr.onload = function(){
+                if(xhr.status === 200){
+                    console.log('PHP ejecutado correctamente' , xhr.responseText);
+                    document.getElementById('respuesta').innerHTML = xhr.responseText;
+                }else{
+                    console.error('Error al ejecutar PHP', xhr.status, xhr.statusText);
+                }
+            };
+            xhr.send();
+        });
+    </script>
 
     <footer class = "footer">
         Consumo de la API "frase del dia" ©
