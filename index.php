@@ -12,7 +12,7 @@
     <main>
         <div class="container">
             <figure>
-                <img src="img/google-logo.png" alt="">
+                <img src="img/sol.svg" alt="" style = "background-color: white" >
             </figure>
             <div class="searcher">
                 <span class="search-logo"></span>
