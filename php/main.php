@@ -21,7 +21,7 @@ $data = json_decode($response, true);
 if(json_last_error() === JSON_ERROR_NONE){
     $phrase = $data ['phrase'] ?? 'NO phrase funnd';
     $author = $data['author'] ?? 'Unknown author funnd';
-    echo '<p>' . "Phrase: $phrase " . "&emsp;" . " Author: $author" . "</p>";
+    echo '<p>' . ' " ' . $phrase . ' " '. "&emsp;" . " - $author"  . "</p>";
 }else{
     echo "Failed to decode JSON response";
 }
