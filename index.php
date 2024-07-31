@@ -12,7 +12,7 @@
     <main>
         <div class="container">
             <figure>
-                <img src="img/logoP1.jpg" alt="" style = "background-color: white" >
+                <img src="img/logoP2.png" alt="" style = "background-color: white" >
             </figure>
             <div class="searcher">
                 <span class="search-logo"></span>
