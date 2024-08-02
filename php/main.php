@@ -29,7 +29,7 @@ if(json_last_error() === JSON_ERROR_NONE){
     $responseData['error'] = "Failed to decode JSON response";
 }
 
-// Establecemos el encabezdo de contenIDO como JSON
-header('Content-Type: application/json');
-echo json_decode($responseData)
+// // Establecemos el encabezdo de contenIDO como JSON
+// header('Content-Type: application/json');
+// echo json_decode($responseData);
 ?>
