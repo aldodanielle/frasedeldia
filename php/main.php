@@ -22,8 +22,9 @@ $responseData = [];
 
 // Verificamos si la decodificacion tuvo exito
 if(json_last_error() === JSON_ERROR_NONE){
-    $responseData['phrase'] = $data ['phrase'] ?? 'NO phrase funnd';
-    $responseData['author'] = $data ['author'] ?? 'Unknown author funnd';
+    $phrase = $data ['phrase'] ?? 'NO phrase funnd';
+    $author = $data['author'] ?? 'Unknown author funnd';
+    echo '<p>' . ' " ' . $phrase . ' " '. "&emsp;" . " - $author"  . "</p>";
 }else{
     $responseData['error'] = "Failed to decode JSON response";
 }
