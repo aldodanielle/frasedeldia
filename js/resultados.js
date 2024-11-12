@@ -1,4 +1,4 @@
-document.getElementById('buscar').addEventListener('click', function(){
+document.ElementById('buscar').addEventListener('click', function(){
     var xhr = new XMLHttpRequest();
     // cremos la solicitud
     xhr.open('GET', 'php/main.php', true);
